@@ -20,6 +20,7 @@ class RssFeed {
   final List<RssCategory> categories;
   final List<String> skipDays;
   final List<int> skipHours;
+  final String explicit;
   final String lastBuildDate;
   final String language;
   final String generator;
@@ -42,6 +43,7 @@ class RssFeed {
     this.categories,
     this.skipDays,
     this.skipHours,
+    this.explicit,
     this.lastBuildDate,
     this.language,
     this.generator,
@@ -65,7 +67,7 @@ class RssFeed {
 
     return RssFeed(
       title: findElementOrNull(channelElement, "title")?.text,
-      author: findElementOrNull(channelElement, "author")?.text,
+      author: findElementOrNull(channelElement, "itunes:author")?.text,
       description: findElementOrNull(channelElement, "description")?.text,
       link: findElementOrNull(channelElement, "link")?.text,
       items: channelElement.findElements("item").map((element) {
@@ -73,7 +75,7 @@ class RssFeed {
       }).toList(),
       image: RssImage.parse(findElementOrNull(channelElement, "image")),
       cloud: RssCloud.parse(findElementOrNull(channelElement, "cloud")),
-      categories: channelElement.findElements("category").map((element) {
+      categories: channelElement.findElements("itunes:category").map((element) {
         return RssCategory.parse(element);
       }).toList(),
       skipDays: findElementOrNull(channelElement, "skipDays")
@@ -88,6 +90,7 @@ class RssFeed {
             return int.tryParse(element.text ?? "0");
           })?.toList() ??
           [],
+      explicit: findElementOrNull(channelElement, "itunes:explicit")?.text,
       lastBuildDate: findElementOrNull(channelElement, "lastBuildDate")?.text,
       language: findElementOrNull(channelElement, "language")?.text,
       generator: findElementOrNull(channelElement, "generator")?.text,
