@@ -3,8 +3,9 @@ import 'package:xml/xml.dart';
 class RssCategory {
   final String domain;
   final String value;
+  final String textAttr;
 
-  RssCategory(this.domain, this.value);
+  RssCategory(this.domain, this.value, this.textAttr);
 
   factory RssCategory.parse(XmlElement element) {
     if (element == null) {
@@ -13,6 +14,6 @@ class RssCategory {
     var domain = element.getAttribute("domain");
     var value = element.text;
 
-    return RssCategory(domain, value);
+    return RssCategory(domain, value, textAttr);
   }
 }
