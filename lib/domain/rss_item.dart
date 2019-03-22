@@ -17,6 +17,11 @@ class RssItem {
   final String pubDate;
   final String author;
   final String comments;
+  final String image;
+  final String duration;
+  final String explicit;
+  final String episodeId;
+  final List<String> keywords;
   final RssSource source;
   final RssContent content;
   final Media media;
@@ -32,6 +37,11 @@ class RssItem {
     this.pubDate,
     this.author,
     this.comments,
+    this.image,
+    this.duration,
+    this.explicit,
+    this.episodeId,
+    this.keywords,
     this.source,
     this.content,
     this.media,
@@ -51,6 +61,11 @@ class RssItem {
       pubDate: findElementOrNull(element, "pubDate")?.text,
       author: findElementOrNull(element, "author")?.text,
       comments: findElementOrNull(element, "comments")?.text,
+      image: findElementOrNull(element, "itunes:image")?.text,
+      duration: findElementOrNull(element, "itunes:duration")?.text,
+      explicit: findElementOrNull(element, "itunes:explicit")?.text,
+      episodeId: findElementOrNull(element, "itunes:episode")?.text,
+      keywords: findElementOrNull(element, "itunes:keywords").text.split(","),
       source: RssSource.parse(findElementOrNull(element, "source")),
       content: RssContent.parse(findElementOrNull(element, "content:encoded")),
       media: Media.parse(element),

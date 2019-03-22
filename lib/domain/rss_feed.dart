@@ -21,6 +21,7 @@ class RssFeed {
   final List<String> skipDays;
   final List<int> skipHours;
   final String explicit;
+  final List<String> keywords;
   final String lastBuildDate;
   final String language;
   final String generator;
@@ -44,6 +45,7 @@ class RssFeed {
     this.skipDays,
     this.skipHours,
     this.explicit,
+    this.keywords,
     this.lastBuildDate,
     this.language,
     this.generator,
@@ -91,6 +93,8 @@ class RssFeed {
           })?.toList() ??
           [],
       explicit: findElementOrNull(channelElement, "itunes:explicit")?.text,
+      keywords:
+          findElementOrNull(channelElement, "itunes:keywords").text.split(","),
       lastBuildDate: findElementOrNull(channelElement, "lastBuildDate")?.text,
       language: findElementOrNull(channelElement, "language")?.text,
       generator: findElementOrNull(channelElement, "generator")?.text,
