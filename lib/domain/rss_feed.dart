@@ -23,6 +23,7 @@ class RssFeed {
   final String explicit;
   final List<String> keywords;
   final String lastBuildDate;
+  final String lastPubDate;
   final String language;
   final String generator;
   final String copyright;
@@ -47,6 +48,7 @@ class RssFeed {
     this.explicit,
     this.keywords,
     this.lastBuildDate,
+    this.lastPubDate,
     this.language,
     this.generator,
     this.copyright,
@@ -96,6 +98,7 @@ class RssFeed {
       keywords:
           findElementOrNull(channelElement, "itunes:keywords").text.split(","),
       lastBuildDate: findElementOrNull(channelElement, "lastBuildDate")?.text,
+      lastPubDate: findElementOrNull(channelElement, "pubDate")?.text,
       language: findElementOrNull(channelElement, "language")?.text,
       generator: findElementOrNull(channelElement, "generator")?.text,
       copyright: findElementOrNull(channelElement, "copyright")?.text,
