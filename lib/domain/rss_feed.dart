@@ -17,12 +17,13 @@ class RssFeed {
 
   final RssImage image;
   final RssCloud cloud;
-  final List<RssCategory> categories;
+  final List<String> categories;
   final List<String> skipDays;
   final List<int> skipHours;
   final String explicit;
   final List<String> keywords;
   final String lastBuildDate;
+  final String lastPubDate;
   final String language;
   final String generator;
   final String copyright;
@@ -47,6 +48,7 @@ class RssFeed {
     this.explicit,
     this.keywords,
     this.lastBuildDate,
+    this.lastPubDate,
     this.language,
     this.generator,
     this.copyright,
@@ -78,7 +80,7 @@ class RssFeed {
       image: RssImage.parse(findElementOrNull(channelElement, "image")),
       cloud: RssCloud.parse(findElementOrNull(channelElement, "cloud")),
       categories: channelElement.findElements("itunes:category").map((element) {
-        return RssCategory.parse(element);
+        return element.getAttribute("text");
       }).toList(),
       skipDays: findElementOrNull(channelElement, "skipDays")
               ?.findAllElements("day")
@@ -96,6 +98,7 @@ class RssFeed {
       keywords:
           findElementOrNull(channelElement, "itunes:keywords").text.split(","),
       lastBuildDate: findElementOrNull(channelElement, "lastBuildDate")?.text,
+      lastPubDate: findElementOrNull(channelElement, "pubDate")?.text,
       language: findElementOrNull(channelElement, "language")?.text,
       generator: findElementOrNull(channelElement, "generator")?.text,
       copyright: findElementOrNull(channelElement, "copyright")?.text,
