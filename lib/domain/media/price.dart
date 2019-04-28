@@ -21,4 +21,7 @@ class Price {
       currency: element.getAttribute("currency"),
     );
   }
+
+  @override
+  String toString() => 'Price{price: $price, type: $type, info: $info, currency: $currency}';
 }

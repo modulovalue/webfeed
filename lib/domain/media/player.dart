@@ -24,4 +24,7 @@ class Player {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Player{url: $url, width: $width, height: $height, value: $value}';
 }

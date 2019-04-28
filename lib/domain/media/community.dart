@@ -31,4 +31,7 @@ class Community {
       ),
     );
   }
+
+  @override
+  String toString() => 'Community{starRating: $starRating, statistics: $statistics, tags: $tags}';
 }

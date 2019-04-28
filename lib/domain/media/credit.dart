@@ -18,4 +18,7 @@ class Credit {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Credit{role: $role, scheme: $scheme, value: $value}';
 }

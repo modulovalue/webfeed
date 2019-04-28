@@ -18,4 +18,7 @@ class Param {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Param{name: $name, value: $value}';
 }

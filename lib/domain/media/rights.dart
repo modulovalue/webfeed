@@ -15,4 +15,7 @@ class Rights {
       status: element.getAttribute("status"),
     );
   }
+
+  @override
+  String toString() => 'Rights{status: $status}';
 }

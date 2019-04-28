@@ -25,4 +25,7 @@ class Scene {
       endTime: findElementOrNull(element, "sceneEndTime")?.text,
     );
   }
+
+  @override
+  String toString() => 'Scene{title: $title, description: $description, startTime: $startTime, endTime: $endTime}';
 }

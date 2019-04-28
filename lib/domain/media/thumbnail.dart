@@ -21,4 +21,7 @@ class Thumbnail {
       time: element.getAttribute("time"),
     );
   }
+
+  @override
+  String toString() => 'Thumbnail{url: $url, width: $width, height: $height, time: $time}';
 }

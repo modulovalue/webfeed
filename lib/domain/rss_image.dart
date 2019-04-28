@@ -18,4 +18,7 @@ class RssImage {
 
     return RssImage(title, url, link);
   }
+
+  @override
+  String toString() => 'RssImage{title: $title, url: $url, link: $link}';
 }

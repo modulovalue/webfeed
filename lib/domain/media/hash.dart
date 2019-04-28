@@ -18,4 +18,7 @@ class Hash {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Hash{algo: $algo, value: $value}';
 }

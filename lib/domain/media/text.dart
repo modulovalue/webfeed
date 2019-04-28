@@ -27,4 +27,7 @@ class Text {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Text{type: $type, lang: $lang, start: $start, end: $end, value: $value}';
 }

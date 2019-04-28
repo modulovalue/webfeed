@@ -18,4 +18,7 @@ class Status {
       reason: element.getAttribute("reason"),
     );
   }
+
+  @override
+  String toString() => 'Status{state: $state, reason: $reason}';
 }

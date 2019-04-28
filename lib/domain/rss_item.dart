@@ -73,4 +73,7 @@ class RssItem {
       dc: DublinCore.parse(element),
     );
   }
+
+  @override
+  String toString() => 'RssItem{title: $title, description: $description, link: $link, categories: $categories, guid: $guid, pubDate: $pubDate, author: $author, comments: $comments, image: $image, duration: $duration, explicit: $explicit, episodeId: $episodeId, keywords: $keywords, source: $source, content: $content, media: $media, enclosure: $enclosure, dc: $dc}';
 }

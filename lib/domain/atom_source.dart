@@ -18,4 +18,7 @@ class AtomSource {
 
     return AtomSource(id, title, updated);
   }
+
+  @override
+  String toString() => 'AtomSource{id: $id, title: $title, updated: $updated}';
 }

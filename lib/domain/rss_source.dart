@@ -15,4 +15,7 @@ class RssSource {
 
     return RssSource(url, value);
   }
+
+  @override
+  String toString() => 'RssSource{url: $url, value: $value}';
 }

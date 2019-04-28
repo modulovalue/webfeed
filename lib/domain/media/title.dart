@@ -18,4 +18,7 @@ class Title {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Title{type: $type, value: $value}';
 }

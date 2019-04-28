@@ -13,4 +13,7 @@ class AtomCategory {
     var label = element.getAttribute("label");
     return AtomCategory(term, scheme, label);
   }
+
+  @override
+  String toString() => 'AtomCategory{term: $term, scheme: $scheme, label: $label}';
 }

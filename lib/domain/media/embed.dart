@@ -27,4 +27,7 @@ class Embed {
       }).toList(),
     );
   }
+
+  @override
+  String toString() => 'Embed{url: $url, width: $width, height: $height, params: $params}';
 }

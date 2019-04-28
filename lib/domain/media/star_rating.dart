@@ -21,4 +21,7 @@ class StarRating {
       max: int.tryParse(element.getAttribute("max") ?? "0"),
     );
   }
+
+  @override
+  String toString() => 'StarRating{average: $average, count: $count, min: $min, max: $max}';
 }

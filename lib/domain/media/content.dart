@@ -53,4 +53,7 @@ class Content {
       lang: element.getAttribute("lang"),
     );
   }
+
+  @override
+  String toString() => 'Content{url: $url, type: $type, fileSize: $fileSize, medium: $medium, isDefault: $isDefault, expression: $expression, bitrate: $bitrate, framerate: $framerate, samplingrate: $samplingrate, channels: $channels, duration: $duration, height: $height, width: $width, lang: $lang}';
 }

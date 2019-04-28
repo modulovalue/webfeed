@@ -16,4 +16,7 @@ class AtomGenerator {
     var value = element.text;
     return new AtomGenerator(uri, version, value);
   }
+
+  @override
+  String toString() => 'AtomGenerator{uri: $uri, version: $version, value: $value}';
 }

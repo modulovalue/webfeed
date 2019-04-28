@@ -27,4 +27,7 @@ class RssContent {
     });
     return RssContent(content, images);
   }
+
+  @override
+  String toString() => 'RssContent{value: $value, images: $images}';
 }

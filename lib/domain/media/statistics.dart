@@ -15,4 +15,7 @@ class Statistics {
       favorites: int.tryParse(element.getAttribute("favorites") ?? "0"),
     );
   }
+
+  @override
+  String toString() => 'Statistics{views: $views, favorites: $favorites}';
 }

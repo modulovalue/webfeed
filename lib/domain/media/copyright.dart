@@ -18,4 +18,7 @@ class Copyright {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Copyright{url: $url, value: $value}';
 }

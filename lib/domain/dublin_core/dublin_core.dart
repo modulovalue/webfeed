@@ -58,4 +58,7 @@ class DublinCore {
       rights: findElementOrNull(element, "dc:rights")?.text,
     );
   }
+
+  @override
+  String toString() => 'DublinCore{title: $title, description: $description, creator: $creator, subject: $subject, publisher: $publisher, contributor: $contributor, date: $date, type: $type, format: $format, identifier: $identifier, source: $source, language: $language, relation: $relation, coverage: $coverage, rights: $rights}';
 }

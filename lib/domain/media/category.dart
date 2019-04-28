@@ -21,4 +21,7 @@ class Category {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Category{scheme: $scheme, label: $label, value: $value}';
 }

@@ -1,7 +1,6 @@
 import 'dart:core';
 
 import 'package:webfeed/domain/dublin_core/dublin_core.dart';
-import 'package:webfeed/domain/rss_category.dart';
 import 'package:webfeed/domain/rss_cloud.dart';
 import 'package:webfeed/domain/rss_image.dart';
 import 'package:webfeed/domain/rss_item.dart';
@@ -110,4 +109,8 @@ class RssFeed {
       dc: DublinCore.parse(channelElement),
     );
   }
+
+  @override
+  String toString() => 'RssFeed{title: $title, author: $author, description: $description, link: $link, items: $items, image: $image, cloud: $cloud, categories: $categories, skipDays: $skipDays, skipHours: $skipHours, explicit: $explicit, keywords: $keywords, lastBuildDate: $lastBuildDate, lastPubDate: $lastPubDate, language: $language, generator: $generator, copyright: $copyright, docs: $docs, managingEditor: $managingEditor, rating: $rating, webMaster: $webMaster, ttl: $ttl, dc: $dc}';
+
 }

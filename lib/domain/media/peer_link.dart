@@ -21,4 +21,7 @@ class PeerLink {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'PeerLink{type: $type, href: $href, value: $value}';
 }

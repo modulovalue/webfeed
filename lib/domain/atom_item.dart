@@ -63,4 +63,7 @@ class AtomItem {
       media: Media.parse(element),
     );
   }
+
+  @override
+  String toString() => 'AtomItem{id: $id, title: $title, updated: $updated, authors: $authors, links: $links, categories: $categories, contributors: $contributors, source: $source, published: $published, content: $content, summary: $summary, rights: $rights, media: $media}';
 }

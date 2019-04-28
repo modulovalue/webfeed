@@ -21,4 +21,7 @@ class Restriction {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Restriction{relationship: $relationship, type: $type, value: $value}';
 }

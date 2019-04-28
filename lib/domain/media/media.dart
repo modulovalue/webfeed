@@ -166,4 +166,7 @@ class Media {
           [],
     );
   }
+
+  @override
+  String toString() => 'Media{group: $group, contents: $contents, credits: $credits, category: $category, rating: $rating, title: $title, description: $description, keywords: $keywords, thumbnails: $thumbnails, hash: $hash, player: $player, copyright: $copyright, text: $text, restriction: $restriction, community: $community, comments: $comments, embed: $embed, responses: $responses, backLinks: $backLinks, status: $status, prices: $prices, license: $license, peerLink: $peerLink, rights: $rights, scenes: $scenes}';
 }

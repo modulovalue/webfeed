@@ -18,4 +18,7 @@ class Rating {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Rating{scheme: $scheme, value: $value}';
 }

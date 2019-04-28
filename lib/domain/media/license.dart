@@ -21,4 +21,7 @@ class License {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'License{type: $type, href: $href, value: $value}';
 }

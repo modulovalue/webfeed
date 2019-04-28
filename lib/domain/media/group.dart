@@ -37,4 +37,7 @@ class Group {
       ),
     );
   }
+
+  @override
+  String toString() => 'Group{contents: $contents, credits: $credits, category: $category, rating: $rating}';
 }

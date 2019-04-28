@@ -17,4 +17,7 @@ class RssCategory {
 
     return RssCategory(domain, value, textAttr);
   }
+
+  @override
+  String toString() => 'RssCategory{domain: $domain, value: $value, textAttr: $textAttr}';
 }

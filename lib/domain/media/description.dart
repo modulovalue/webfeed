@@ -18,4 +18,7 @@ class Description {
       value: element.text,
     );
   }
+
+  @override
+  String toString() => 'Description{type: $type, value: $value}';
 }

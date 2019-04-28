@@ -14,4 +14,7 @@ class AtomPerson {
     var email = findElementOrNull(element, "email")?.text;
     return AtomPerson(name, uri, email);
   }
+
+  @override
+  String toString() => 'AtomPerson{name: $name, uri: $uri, email: $email}';
 }

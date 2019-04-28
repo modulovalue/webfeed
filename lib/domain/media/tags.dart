@@ -18,4 +18,7 @@ class Tags {
       weight: int.tryParse(element.getAttribute("weight") ?? "1"),
     );
   }
+
+  @override
+  String toString() => 'Tags{tags: $tags, weight: $weight}';
 }

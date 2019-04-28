@@ -29,4 +29,7 @@ class AtomLink {
     }
     return AtomLink(href, rel, type, hreflang, title, length);
   }
+
+  @override
+  String toString() => 'AtomLink{href: $href, rel: $rel, type: $type, hreflang: $hreflang, title: $title, length: $length}';
 }
