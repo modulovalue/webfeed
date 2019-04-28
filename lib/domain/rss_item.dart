@@ -65,7 +65,7 @@ class RssItem {
       duration: findElementOrNull(element, "itunes:duration")?.text,
       explicit: findElementOrNull(element, "itunes:explicit")?.text,
       episodeId: findElementOrNull(element, "itunes:episode")?.text,
-      keywords: findElementOrNull(element, "itunes:keywords").text.split(","),
+      keywords: findElementOrNull(element, "itunes:keywords")?.text?.split(","),
       source: RssSource.parse(findElementOrNull(element, "source")),
       content: RssContent.parse(findElementOrNull(element, "content:encoded")),
       media: Media.parse(element),

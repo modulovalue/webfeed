@@ -95,7 +95,7 @@ class RssFeed {
           [],
       explicit: findElementOrNull(channelElement, "itunes:explicit")?.text,
       keywords:
-          findElementOrNull(channelElement, "itunes:keywords").text.split(","),
+          findElementOrNull(channelElement, "itunes:keywords")?.text?.split(","),
       lastBuildDate: findElementOrNull(channelElement, "lastBuildDate")?.text,
       lastPubDate: findElementOrNull(channelElement, "pubDate")?.text,
       language: findElementOrNull(channelElement, "language")?.text,
